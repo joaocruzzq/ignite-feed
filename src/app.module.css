@@ -8,5 +8,5 @@
    grid-template-columns: 256px 1fr;
    
    gap: 2rem;
-   align-items: felx-start;
+   align-items: flex-start;
 }
