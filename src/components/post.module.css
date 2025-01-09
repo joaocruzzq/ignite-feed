@@ -1,7 +1,7 @@
 .post {
-   background: var(--gray-800);
-   border-radius: 8px;
    padding: 2.5rem;
+   border-radius: 8px;
+   background: var(--gray-800);
 }
 
 .post + .post {
@@ -10,8 +10,8 @@
 
 .content {
    line-height: 1.6;
-   color: var(--gray-300);
    margin-top: 1.5rem;
+   color: var(--gray-300);
 }
 
 .content p {
@@ -20,8 +20,8 @@
 
 .content a {
    font-weight: bold;
-   color: var(--green-500);
    text-decoration: none;
+   color: var(--green-500);
 }
 
 .content a:hover {
@@ -42,6 +42,7 @@
 .author {
    display: flex;
    align-items: center;
+
    gap: 1rem;
 }
 
@@ -56,13 +57,72 @@
 
 .authorInfo strong {
    display: block;
-   color: var(--gray-100);
    line-height: 1.6;
+   color: var(--gray-100);
 }
 
 .authorInfo span {
    display: block;
+   line-height: 1.6;
    font-size: 0.875rem;
    color: var(--gray-400);
+}
+
+.commentForm {
+   width: 100%;
+   margin-top: 1.5rem;
+   padding-top: 1.5rem;
+   border-top: 1px solid var(--gray-600);
+}
+
+.commentForm > strong {
    line-height: 1.6;
+   color: var(--gray-100);
+}
+
+.commentForm textarea {
+   width: 100%;
+   height: 6rem;
+
+   border: 0;
+   border-radius: 8px;
+
+   resize: none;
+   line-height: 1.4;
+
+   padding: 1rem;
+   margin-top: 1rem;
+
+   color: var(--gray-100);
+   background: var(--gray-900);
+}
+
+.commentForm footer {
+   max-height: 0;
+   visibility: hidden;
+}
+
+.commentForm:focus-within footer {
+   max-height: none;
+   visibility: visible;
+}
+
+.commentForm button[type=submit] {
+   margin-top: 1rem;
+   padding: 1rem 1.5rem;
+
+   border: 0;
+   border-radius: 8px;
+
+   cursor: pointer;
+   font-weight: bold;
+   
+   color: var(--white);
+   background: var(--green-500);
+
+   transition: background-color 0.1s;
+}
+
+.commentForm button[type=submit]:hover {
+   background: var(--green-300);
 }
